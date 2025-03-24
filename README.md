@@ -1,2 +1,2 @@
-# Portfolio Website
-Welcome to my personal portfolio! This project showcases my skills, projects, and experience as a front-end developer.
+# Portfolio 
+Welcome to my personal portfolio! This projects showcase my skills, projects, and experience as a front-end developer.
