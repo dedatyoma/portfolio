@@ -1,11 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import './Navbar.css'
 import logo from '../Assets/logo.png'
 import cart_icon from '../Assets/cart_icon.png'
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const cartItems = useSelector(state => state.cart.items);
   
   const getTotalCartItems = () => {
@@ -14,19 +18,23 @@ const Navbar = () => {
 
   return (
     <div className='navbar'>
-      <div className="nav-logo">
+      <div className="nav-logo" onClick={() =>{ navigate("/")
+        
+      }}>
         <img src={logo} alt="Store Logo" />
-        <p>SHOPPER</p>
+        <p>UrbanFit</p>
       </div>
       <ul className="nav-menu">
-        <li><Link to='/'>Shop</Link></li>
-        <li><Link to='/men'>Men</Link></li>
-        <li><Link to='/women'>Women</Link></li>
-        <li><Link to='/kids'>Kids</Link></li>
+        <li><Link to='/' className={location.pathname === '/' ? 'active' : ''}>Shop</Link></li>
+        <li><Link to='/men' className={location.pathname === '/men' ? 'active' : ''}>Men</Link></li>
+        <li><Link to='/women' className={location.pathname === '/women' ? 'active' : ''}>Women</Link></li>
+        <li><Link to='/kids' className={location.pathname === '/kids' ? 'active' : ''}>Kids</Link></li>
       </ul>
       <div className="nav-login-cart">
-        <Link to='/login'><button>Login</button></Link>
-        <Link to='/cart'>
+        <Link to='/login'>
+          <button className={location.pathname === '/login' ? 'active' : ''}>Login</button>
+        </Link>
+        <Link to='/cart' className={location.pathname === '/cart' ? 'active' : ''}>
           <img src={cart_icon} alt="Cart" />
         </Link>
         {getTotalCartItems() > 0 && <div className="nav-cart-count">{getTotalCartItems()}</div>}

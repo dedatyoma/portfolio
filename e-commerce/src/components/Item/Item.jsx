@@ -103,7 +103,9 @@ const Item = (props) => {
       </div>
       <button 
         className="item-add-cart"
-        onClick={() => dispatch(addToCart(props.id))}
+        onClick={() => {dispatch(addToCart(props.id))
+          return alert("Item added to the cart")
+        }}
       >
         Add to Cart
       </button>

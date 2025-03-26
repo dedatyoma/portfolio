@@ -3,11 +3,18 @@
   justify-content: space-around;
   padding: 16px;
   box-shadow: 0 1px 3px -2px black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 1000;
 }
 .nav-logo{
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 .nav-logo p{
   color:#171717;
@@ -54,9 +61,7 @@
   background: white;
   cursor: pointer;
 }
-.nav-login-cart:active{
-  background:#f3f3f3;
-}
+
 .nav-cart-count{
   width: 22px;
   height: 22px;
@@ -102,4 +107,14 @@
 
 .nav-menu li a.active::after {
   width: 100%;
+}
+
+.nav-login-cart button.active {
+  background: #ff4141;
+  color: white;
+  border-color: #ff4141;
+}
+
+.nav-login-cart a:first-child::after {
+  display: none;
 }

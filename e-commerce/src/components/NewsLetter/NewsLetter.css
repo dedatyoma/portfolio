@@ -37,13 +37,13 @@
   height: 70px;
   border-radius: 80px;
   border: 1px solid #e3e3e3;
-  padding: 0 10px;
+  
 }
 
 .letters-input {
   width: 100%;
   max-width: 500px;
-  margin-left: 20px;
+  margin-left: 30px;
   border: none;
   outline: none;
   color: #616161;
@@ -63,7 +63,7 @@
 }
 
 .newsletter button {
-  width: 210px;
+  width: 250px;
   height: 70px;
   border-radius: 80px;
   background: black;

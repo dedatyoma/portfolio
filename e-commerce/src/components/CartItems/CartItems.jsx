@@ -46,9 +46,9 @@ const CartItems = () => {
                 <tr key={e.id} className='cartitems-format format-main'>
                   <td><img src={images[e.image]} alt={`${e.name} product`} className='product-icon'/></td>
                   <td>{e.name}</td>
-                  <td>${e.new_price}</td>
-                  <td><button className='quantity' aria-label={`Quantity of ${e.name}`}>{cartItems[e.id]}</button></td>
-                  <td>${e.new_price * cartItems[e.id]}</td>
+                  <td className='price'>${e.new_price}</td>
+                  <td className='quantity-item'><button className='add-remove-item'>+</button><button className='quantity' aria-label={`Quantity of ${e.name}`}>{cartItems[e.id]}</button><button className='add-remove-item'>-</button></td>
+                  <td className='total'>${e.new_price * cartItems[e.id]}</td>
                   <td>
                     <button 
                       className='cart-remove-icon' 

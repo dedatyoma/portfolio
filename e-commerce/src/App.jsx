@@ -15,7 +15,7 @@ import kid_banner from './components/Assets/banner_kids.png'
 
 function App() {
   return (
-    <div>
+    <div className="app-container">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
