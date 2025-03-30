@@ -1,22 +1,27 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts, selectAllProducts, selectProductsStatus } from '../redux/slices/productsSlice';
+import React from 'react';
+import { useProducts } from '../hooks/useProducts';
 import Item from '../components/Item/Item';
 import './styles/Shop.css';
 
 const Shop = () => {
-  const dispatch = useDispatch();
-  const products = useSelector(selectAllProducts);
-  const status = useSelector(selectProductsStatus);
+  const { 
+    products, 
+    isLoading, 
+    isError, 
+    error, 
+    isEmpty 
+  } = useProducts();
 
-  useEffect(() => {
-    if (status === 'idle') {
-      dispatch(fetchProducts());
-    }
-  }, [status, dispatch]);
-
-  if (status === 'loading') {
+  if (isLoading) {
     return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <div>Error: {error}</div>;
+  }
+
+  if (isEmpty) {
+    return <div>No products available</div>;
   }
 
   return (
@@ -26,11 +31,7 @@ const Shop = () => {
         {products.map((item) => (
           <Item 
             key={item.id}
-            id={item.id}
-            name={item.name}
-            image={item.image}
-            new_price={item.new_price}
-            old_price={item.old_price}
+            {...item}
           />
         ))}
       </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import './styles/ShopCategory.css'
-import dropdown_icon from '../components/Assets/dropdown_icon.png'
+import dropdown_icon from '../assets/dropdown_icon.png'
 import Item from '../components/Item/Item'
 import { selectAllProducts } from '../redux/slices/productsSlice'
 

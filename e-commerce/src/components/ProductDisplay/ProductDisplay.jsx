@@ -1,19 +1,21 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
-import star_icon from '../Assets/star_icon.png'
-import star_dull_icon from '../Assets/star_dull_icon.png'
+import { useDispatch, useSelector } from 'react-redux'
+import star_icon from '../../assets/star_icon.png'
+import star_dull_icon from '../../assets/star_dull_icon.png'
 import { addToCart } from '../../redux/slices/cartSlice'
 import './ProductDisplay.css'
 
-// Импортируем все изображения
 const importImage = (imageName) => {
-  return new URL(`../Assets/${imageName}`, import.meta.url).href;
+  return new URL(`../../assets/${imageName}`, import.meta.url).href;
 };
 
 const ProductDisplay = (props) => {
-  const {product} = props;
+  const { product } = props;
   const dispatch = useDispatch();
-  
+  const products = useSelector(state => state.products.items);
+  const status = useSelector(state => state.products.status);
+  const error = useSelector(state => state.products.error);
+
   return (
     <div className='product-display'>
       <div className="left">
@@ -51,9 +53,10 @@ const ProductDisplay = (props) => {
             <div>XXL</div>
           </div>
         </div>
-        <button 
+        <button
           className="add-to-cart-btn"
-          onClick={() => {dispatch(addToCart(product.id))
+          onClick={() => {
+            dispatch(addToCart(product.id))
             return alert("Item added to the cart.")
           }}
         >

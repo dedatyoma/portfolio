@@ -1,34 +1,24 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import './NewCollections.css'
-import Item from '../Item/Item'
-import { selectAllProducts, selectProductsStatus, fetchProducts } from '../../redux/slices/productsSlice'
+import React from 'react';
+import './NewCollections.css';
+import Item from '../Item/Item';
+import { useProducts } from '../../hooks/useProducts';
 
 const NewCollections = () => {
-  const dispatch = useDispatch();
-  const products = useSelector(selectAllProducts);
-  const status = useSelector(selectProductsStatus);
+  const { 
+    isLoading, 
+    isError, 
+    getRandomProducts 
+  } = useProducts();
 
-  useEffect(() => {
-    if (status === 'idle') {
-      dispatch(fetchProducts());
-    }
-  }, [status, dispatch]);
-
-  if (status === 'loading') {
+  if (isLoading) {
     return <div>Loading...</div>;
   }
 
-  if (status === 'failed') {
+  if (isError) {
     return <div>Error loading products</div>;
   }
 
-  const getRandomProducts = () => {
-    const shuffled = [...products].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, 8);
-  };
-
-  const newCollections = getRandomProducts();
+  const newCollections = getRandomProducts(8);
 
   return (
     <div className='new-collections'>
@@ -37,18 +27,14 @@ const NewCollections = () => {
       <div className="collections">
         {newCollections.map((item) => (
           <Item 
-            key={item.id} 
-            id={item.id} 
-            name={item.name} 
-            image={item.image} 
-            new_price={item.new_price} 
-            old_price={item.old_price}
+            key={item.id}
+            {...item}
           />
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default NewCollections
+export default NewCollections;
  
