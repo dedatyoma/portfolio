@@ -3,27 +3,44 @@ import axios from 'axios';
 
 export const fetchProducts = createAsyncThunk(
   'products/fetchProducts',
-  async () => {
-    const response = await axios.get('http://localhost:3001/products');
-    return response.data;
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await axios.get('http://localhost:3001/products');
+      return response.data;
+    } catch (error) {
+      const errorMessage = error.response?.data?.message || 'Unable to load products';
+      return rejectWithValue({ message: errorMessage, status: error.response?.status });
+    }
   }
 );
 
 export const fetchProductById = createAsyncThunk(
   'products/fetchProductById',
-  async (productId) => {
-    const response = await axios.get(`http://localhost:3001/products/${productId}`);
-    return response.data;
+  async (productId, { rejectWithValue }) => {
+    try {
+      const response = await axios.get(`http://localhost:3001/products/${productId}`);
+      return response.data;
+    } catch (error) {
+      const errorMessage = error.response?.data?.message || 'Product not found';
+      return rejectWithValue({ 
+        message: errorMessage, 
+        status: error.response?.status,
+        productId 
+      });
+    }
   }
 );
 
+
 const initialState = {
   items: [],
-  currentProduct: null,
+  byCategory: {},
+  paginationData: {
+    totalItems: 0,
+    currentPage: 1,
+  },
   status: 'idle',
-  currentProductStatus: 'idle',
-  error: null,
-  currentProductError: null
+  error: null
 };
 
 export const productsSlice = createSlice({
@@ -60,44 +77,22 @@ export const productsSlice = createSlice({
         state.currentProductStatus = 'failed';
         state.currentProductError = action.error.message;
       });
-  },
+  }
 });
 
-const selectProductsState = state => state.products;
+export const selectAllProducts = state => state.products.items;
+export const selectProductsStatus = state => state.products.status;
+export const selectProductsError = state => state.products.error;
+export const selectCurrentProduct = state => state.products.currentProduct;
+export const selectCurrentProductStatus = state => state.products.currentProductStatus;
+export const selectCurrentProductError = state => state.products.currentProductError;
+export const selectPaginationData = state => state.products.paginationData;
 
-export const selectAllProducts = createSelector(
-  [selectProductsState],
-  products => products.items
-);
-
-export const selectProductsStatus = createSelector(
-  [selectProductsState],
-  products => products.status
-);
-
-export const selectProductsError = createSelector(
-  [selectProductsState],
-  products => products.error
-);
-
-export const selectWomenProducts = createSelector(
-  [selectAllProducts],
-  products => products.filter(item => item.category === 'women')
-);
-
-export const selectCurrentProduct = createSelector(
-  [selectProductsState],
-  products => products.currentProduct
-);
-
-export const selectCurrentProductStatus = createSelector(
-  [selectProductsState],
-  products => products.currentProductStatus
-);
-
-export const selectCurrentProductError = createSelector(
-  [selectProductsState],
-  products => products.currentProductError
+export const selectProductsByCategory = createSelector(
+  [selectAllProducts, (_, category) => category],
+  (products, category) => {
+    return products.filter(product => product.category === category);
+  }
 );
 
 export default productsSlice.reducer;

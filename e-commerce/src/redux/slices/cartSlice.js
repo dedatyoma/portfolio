@@ -1,4 +1,5 @@
 import { createSlice, createSelector } from '@reduxjs/toolkit';
+import all_product from '../../assets/all_product';
 
 const initialState = {
   items: JSON.parse(localStorage.getItem('cartItems')) || {},
@@ -28,7 +29,7 @@ export const cartSlice = createSlice({
     updateTotalAmount: (state, action) => {
       state.totalAmount = action.payload;
     }
-  },
+  }
 });
 
 export const { addToCart, removeFromCart, clearCart, updateTotalAmount } = cartSlice.actions;
@@ -50,4 +51,22 @@ export const selectTotalCartItems = createSelector(
   items => Object.values(items).reduce((total, quantity) => total + quantity, 0)
 );
 
+export const selectCartItemsCount = createSelector(
+  [selectCartItems],
+  items => Object.values(items).reduce((total, quantity) => total + quantity, 0)
+);
+
+export const selectCalculatedTotalAmount = createSelector(
+  [selectCartItems],
+  (items) => {
+    let totalAmount = 0;
+    for (const item in items) {
+      if (items[item] > 0) {
+        let itemInfo = all_product.find((product) => product.id === Number(item));
+        totalAmount += itemInfo.new_price * items[item];
+      }
+    }
+    return totalAmount;
+  }
+)
 export default cartSlice.reducer; 

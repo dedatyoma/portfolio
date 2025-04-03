@@ -15,11 +15,19 @@
   opacity: 0.5;
 }
 
-.breadcrumbs span:last-child {
-  color: #1e1e1e;
-  font-weight: 500;
+.breadcrumbs a {
+  color: #5e5e5e;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.breadcrumbs span {
+.breadcrumbs a:hover {
+  color: #ff4141;
+  text-decoration: underline;
+}
+
+.breadcrumbs .current-page {
+  color: #1e1e1e;
+  font-weight: 500;
   cursor: default;
-} 
+}

@@ -1,33 +1,33 @@
-import React, {createContext, useState} from "react";
+import React, { createContext } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart as addToCartAction, removeFromCart as removeFromCartAction } from "../redux/slices/cartSlice";
 import all_product from '../assets/all_product'
 
 const ShopContext = createContext(null);
-const getDefaultCart = () => {
-  let cart = {};
-  for(let i=0; i < all_product.length+1; i++){
-    cart[i] = 0
-  }
-  return cart;
-}
 export {ShopContext};
 
 const ShopContextProvider = (props) => {
   
-  const [cartItems, setCartItems] = useState(getDefaultCart());
+ const dispatch = useDispatch();
 
-  const addToCart = (itemId) =>{
-    setCartItems((prev) =>({...prev, [itemId]:prev[itemId]+1}));
-  }
-  const removeFromCart = (itemId) =>{
-    setCartItems((prev) =>({...prev, [itemId]:prev[itemId]-1}));
-  }
-  
+ const cartItems = useSelector((state) => state.cart.items);
+ const totalAmount = useSelector((state) => state.cart.totalAmount)
+
+ const addToCart = (itemId) => {
+  dispatch(addToCartAction(itemId))
+ }
+
+ const removeFromCart = (itemId) => {
+  dispatch(removeFromCartAction(itemId))
+ }
   const getTotalCartAmount = () => {
     let totalAmount = 0;
     for(const item in cartItems) {
       if(cartItems[item] > 0) {
         let itemInfo = all_product.find((product) => product.id === Number(item))
-        totalAmount += itemInfo.new_price * cartItems[item]
+        if (itemInfo) {
+          totalAmount += itemInfo.new_price * cartItems[item]
+        }
       }
     }
     return totalAmount

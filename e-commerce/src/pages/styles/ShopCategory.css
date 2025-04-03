@@ -1,8 +1,3 @@
-.banner{
-  display: block;
-  margin: 30px auto;
-  width: 82%;
-}
 .shopcategory-indexSort{
   display: flex;
   margin: 0px 170px;
@@ -14,9 +9,13 @@
 
 }
 .shopcategory-sort{
+  margin: 5px;
   padding:10px ;
   border-radius: 4px;
-  border: 1px solid #888;
+}
+.sort{
+  color: black;
+  background-color: transparent;
 }
 .shopcategory-products{
  margin: 20px 170px;
@@ -36,4 +35,111 @@
   color:black;
   font-size: 18px;
   font-weight: 700;
+}
+
+.loading-message,
+.error-message,
+.empty-message {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.error-message {
+  color: #f44336;
+  background-color: #ffebee;
+  border: 1px solid #ffcdd2;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 80%;
+}
+
+.loading-message {
+  color: #2196f3;
+}
+
+.empty-message {
+  color: #757575;
+  font-style: italic;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  gap: 10px;
+}
+
+.pagination-button {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #e6e6e6;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 5px;
+}
+
+.page-number {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page-number.active {
+  background-color: #232322;
+  color: white;
+  border-color: #232322;
+  font-weight: bold;
+}
+
+.page-number:hover:not(.active) {
+  background-color: #f0f0f0;
+}
+
+.ellipsis {
+  align-self: center;
+  margin: 0 5px;
+}
+
+@media (max-width: 600px) {
+  .pagination {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .page-numbers {
+    order: 1;
+  }
+  
+  .pagination-button {
+    order: 2;
+    width: 100%;
+    max-width: 200px;
+  }
 }

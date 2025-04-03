@@ -13,15 +13,30 @@ const Shop = () => {
   } = useProducts();
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="shop">
+        <h1>Our Products</h1>
+        <div className="loading">Loading products...</div>
+      </div>
+    );
   }
 
   if (isError) {
-    return <div>Error: {error}</div>;
+    return (
+      <div className="shop">
+        <h1>Our Products</h1>
+        <div className="error">Error: {error}</div>
+      </div>
+    );
   }
 
   if (isEmpty) {
-    return <div>No products available</div>;
+    return (
+      <div className="shop">
+        <h1>Our Products</h1>
+        <div className="empty">No products available</div>
+      </div>
+    );
   }
 
   return (

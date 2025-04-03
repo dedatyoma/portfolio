@@ -40,6 +40,13 @@
   border-radius: 70px;
   margin-top: 30px;
   background: #ff4141;
+  transition: all 0.5s ease;
+}
+.hero-latest-btn:hover{
+  background-color: #ee1010;
+  transform: scale(1.05);
+}
+.hero-latest-btn p{
   color: white;
   font-size: 22px;
   font-weight: 500;
@@ -49,4 +56,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.hero-image:hover{
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+.hero-image{
+  transition: all 0.5s ease;
+}
+.hero-image:after{
+  transform: scale(1);
 }

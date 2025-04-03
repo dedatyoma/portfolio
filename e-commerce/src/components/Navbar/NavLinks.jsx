@@ -5,7 +5,7 @@ const navItems = [
   { path: '/', label: 'Shop' },
   { path: '/men', label: 'Men' },
   { path: '/women', label: 'Women' },
-  { path: '/kids', label: 'Kids' }
+  { path: '/kid', label: 'Kids' }
 ];
 
 const NavLinks = () => {

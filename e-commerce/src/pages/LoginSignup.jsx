@@ -70,17 +70,19 @@ const LoginSignup = () => {
                   <ErrorMessage name='email' component="div" className='error-message'/>
               </div>
               {!isLogin && (
-                <div className="agree">
-                  <Field 
-                  type="checkbox"
-                  name="agreeToTerms"
-                  id="agreeToTerms"
-                  />
-                  <label htmlFor="agreeToTerms">
-                    By continuing, I agree to the terms of use & policy
-                  </label>
-                  <ErrorMessage name='agreeToTerms' component="div" className='error-message'/>
-                </div>
+                <>
+                  <div className="agree">
+                    <Field 
+                    type="checkbox"
+                    name="agreeToTerms"
+                    id="agreeToTerms"
+                    />
+                    <label htmlFor="agreeToTerms">
+                      By continuing, I agree to the terms of use & policy
+                    </label>
+                  </div>
+                  <ErrorMessage name='agreeToTerms' component="div" className='agree-error-message'/>
+                </>
               )}
               <button type='submit' disabled={isSubmitting}>
               {isSubmitting ? "Submitting..." : (isLogin ? 'Login' : 'Continue')}
