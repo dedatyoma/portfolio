@@ -13,3 +13,8 @@ Welcome to my personal portfolio! Here you can find some of the projects that re
 3. E-commerce Website
 🧪 Tech stack: React, Redux Toolkit, Axios, MongoDB
 📄 Description: My final project at IT School Hillel — a small e-commerce platform with product listings, cart functionality, and backend integration (via MongoDB). Focused on modular code structure and asynchronous data fetching.
+
+4. First HTML & SCSS Project
+🧪 Tech stack: HTML, CSS, SCSS
+📄 Description: My first big project that I made, while I was studying at IT School Hillel - a Home page of the law company "HLegal".
+
