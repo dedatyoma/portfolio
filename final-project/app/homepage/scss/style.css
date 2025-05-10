@@ -678,6 +678,8 @@ h1 {
 }
 .public_container {
   display: flex;
+  align-items: center;
+  gap: 30px;
   margin-left: 150px;
 }
 
