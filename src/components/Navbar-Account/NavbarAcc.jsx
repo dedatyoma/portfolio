@@ -18,7 +18,7 @@ const NavbarAcc = () => {
 
   const navItems = [
     {label: 'Dashboard', icon: <HomeOutlinedIcon />, path: '/'},
-    {label: 'Accounts', icon: <AssignmentIndOutlinedIcon />, path: '/account'},
+    {label: 'Accounts', icon: <AssignmentIndOutlinedIcon />, path: '/'},
     {label: 'Brokers', icon: <GroupOutlinedIcon />},
     {label: 'Submissions', icon: <FileOpenOutlinedIcon />},
     {label: 'Organizations', icon: <ApartmentOutlinedIcon />},
