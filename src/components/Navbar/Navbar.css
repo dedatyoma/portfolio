@@ -1,0 +1,49 @@
+.main{
+  display: flex;
+  margin-left: 70px;
+  padding: 10px;
+}
+.navbar {
+  display: flex; 
+  align-items: center;
+  width: auto;
+  gap: 8px;
+}
+.nav-button {
+  display: flex;  
+  border-radius: 50px;
+  background-color:#181e32;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.nav-button.active {
+  background-color: #4E73DF;
+  color: white;
+}
+.icon.active{
+  color: white;
+}
+.pagination{ 
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 500px;
+}
+.pag-button{
+  width: 45px;
+  height: 45px;
+  border-radius:50px;
+  background-color: #181e32;
+  border: 1px solid rgb(45, 61, 91);
+  cursor: pointer;
+}
+@media screen and (max-width: 1440px) {
+  .navbar{
+    gap: 8px;
+  }
+  .pagination{
+    margin-left: 100px;
+  }
+  
+}

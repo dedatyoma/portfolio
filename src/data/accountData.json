@@ -1,0 +1,55 @@
+[{
+  "account" : "NAMEX Tech Solutions",
+  "type" : "Large Enterprise",
+  "line" : "D&O Liability",
+  "broker" : "Willis Towers",
+  "premium" : "$2.3M",
+  "renewalDate" : "04/16/2025",
+  "ratedPremium" : "$2.8M",
+  "lossRatio" : "32%",
+  "apppetite" : "high",
+  "statusData" : {"label" : "Active", "color" : "primary"} ,
+  "triage" : "180",
+  "winnablitity": "Very Strong"
+},
+{
+  "account" : "Alliance Healthcare Systems",
+  "type" : "Mid-Market",
+  "line" : "Medical Malpractice",
+  "broker" : "Aon Risk",
+  "premium" : "$1.7M",
+  "renewalDate" : "06/30/2025",
+  "ratedPremium" : "$1.9M",
+  "lossRatio" : "38%",
+  "apppetite" : "Meduim",
+  "statusData" : {"label" : "Under review", "color" : "blue"} ,
+  "triage" : "165",
+  "winnablitity": "Strong"
+},{
+  "account" : "Maritime Logistics Corp",
+  "type" : "Shipping/Logistics",
+  "line" : "Marine Cargo",
+  "broker" : "Marsh Mclennan",
+  "premium" : "$875K",
+  "renewalDate" : "09/05/2025",
+  "ratedPremium" : "$920K",
+  "lossRatio" : "25%",
+  "apppetite" : "high",
+  "statusData" : {"label" : "Active", "color" : "primary"} ,
+  "triage" : "182",
+  "winnablitity": "Very Strong"
+},{
+  "account" : "GreenField Energy Ltd",
+  "type" : "Energy Sector",
+  "line" : "Environmental Liability",
+  "broker" : "Aon Risk",
+  "premium" : "$1.2M",
+  "renewalDate" : "07/22/2025",
+  "ratedPremium" : "$1.4M",
+  "lossRatio" : "67%",
+  "apppetite" : "Cautious",
+  "statusData" : {"label" : "Under review", "color" : "blue"} ,
+  "triage" : "158",
+  "winnablitity": "Meduim"
+}
+]
