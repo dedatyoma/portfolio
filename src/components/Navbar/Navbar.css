@@ -8,9 +8,9 @@
   align-items: center;
   width: auto;
   gap: 8px;
+  overflow-x: auto;
 }
 .nav-button {
-  display: flex;  
   border-radius: 50px;
   background-color:#181e32;
   color: white;
@@ -28,7 +28,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: 500px;
+  margin-left: 50px;
 }
 .pag-button{
   width: 45px;
@@ -39,11 +39,39 @@
   cursor: pointer;
 }
 @media screen and (max-width: 1440px) {
+  .main{
+    margin-left: 25px;
+  }
   .navbar{
     gap: 8px;
   }
   .pagination{
-    margin-left: 100px;
+    margin-left: 50px;
   }
-  
+}
+@media screen and (max-width: 1024px) {
+  .navbar{
+    gap: 10px;
+    width: 100%;
+    overflow-x: auto;
+  }
+  .main{
+    margin-left: 30px;
+  }
+  .pagination{
+    display: none;
+  }
+  .nav-button{
+    min-width: fit-content;
+    height: 50px;
+    font-size: 10px !important;
+    padding: 0 15px;
+    white-space: nowrap;
+  }
+  .nav-button .MuiListItemIcon-root {
+    min-width: 30px;
+  }
+  .nav-button .MuiListItemText-root {
+    margin: 0;
+  }
 }

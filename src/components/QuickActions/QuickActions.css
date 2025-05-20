@@ -29,3 +29,14 @@
   font-size: 20px;
   cursor: pointer;
 }
+@media screen and (max-width: 1440px) {
+  .quick-actions{
+   position: relative;
+   top: -10px
+  }
+}
+@media screen and (max-width: 1024px) {
+  .quick-actions{
+    width: 500px;
+  }
+}

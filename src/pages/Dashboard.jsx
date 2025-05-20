@@ -18,11 +18,13 @@ const Dashboard = () => {
       <Navbar/>
       <section>
       <WorkQueue/>
-      <PortGoals/>
-      <div className='quick-actions-market'>
-        <QuickActions/>
-        <Market/>
-      </div>
+        <div className="dashboard-elements">
+          <PortGoals/>
+        <div className='quick-actions-market'>
+          <QuickActions/>
+          <Market/>
+          </div>
+        </div>
       </section>
       <div className='myAccounts'>
         <MyAccounts/>

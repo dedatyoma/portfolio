@@ -50,6 +50,16 @@
 }
 @media screen and (max-width:1440px) {
   .filters{
-    margin-right: 100px;
+    margin-left: -40px;
   }
+}
+@media screen and (max-width:1024px) {
+  .work-queue{
+    width: 90%;
+    margin-left: 30px;
+  }
+  .filters{
+    margin-left: -40px;
+  }
+  
 }

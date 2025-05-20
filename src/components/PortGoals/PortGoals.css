@@ -10,6 +10,18 @@
   box-sizing: border-box;
   color: #fff;
 }
+@media screen and (max-width: 1440px) {
+  .port-goals{
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .port-goals{
+    width: 90%;
+    margin-left: 30px;
+  }
+  
+}
 
 .port-goals-title {
   display: flex;
@@ -54,7 +66,6 @@
   transition: width 0.6s cubic-bezier(0.4,0,0.2,1);
 }
 
-/* Цвета для разных баров */
 .loss-ratio-bar .goal-bar-fill.good {
   background: linear-gradient(90deg, #6ee7b7 60%, #22c55e 100%);
 }
@@ -112,21 +123,17 @@
   color: #ef4444;
   font-weight: 600;
 }
-
-/* Для ON TARGET (жёлтый) */
 .renewal-bar .goal-bar-status .good {
   color: #facc15;
 }
 
-/* Скругления и плавность */
 .goal-bar, .goal-bar-fill {
   border-radius: 12px;
 }
 
-/* Адаптивность */
-@media (max-width: 400px) {
+@media (max-width: 1024px) {
   .port-goals {
-    width: 98vw;
+    width: 900px;
     min-width: 0;
     margin-left: 0;
     padding: 10px;

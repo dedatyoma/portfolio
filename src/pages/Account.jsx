@@ -1,4 +1,3 @@
-import NavbarAcc from '../components/Navbar-Account/NavbarAcc'
 import AccountInfo from '../components/AccountInfo/AccountInfo'
 
 const Account = () => {

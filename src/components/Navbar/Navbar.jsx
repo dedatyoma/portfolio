@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './Navbar.css'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
@@ -25,6 +25,10 @@ const Navbar = () => {
     {label: 'Organizations', icon: <ApartmentOutlinedIcon />},
     {label: 'Goal & Rules', icon: <FlagCircleIcon />},
     {label: 'Admin', icon: <KeyIcon />},
+    {label: 'Admin', icon: <KeyIcon />},
+    {label: 'Admin', icon: <KeyIcon />},
+    {label: 'Admin', icon: <KeyIcon />},
+    {label: 'Admin', icon: <KeyIcon />}
   ];
   
 
@@ -36,7 +40,7 @@ const Navbar = () => {
           <ListItem 
             key={index} 
             className={`nav-button ${activeItem === item.label ? 'active' : ''}`}
-            sx={{width: '160px', textAlign: 'center'}}
+            sx={{textAlign: 'center'}}
             onClick={() => {
               setActiveItem(item.label);
               navigate(item.path);
