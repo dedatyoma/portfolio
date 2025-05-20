@@ -11,6 +11,7 @@
   overflow-x: auto;
 }
 .nav-button {
+   min-width: fit-content;
   border-radius: 50px;
   background-color:#181e32;
   color: white;
@@ -47,6 +48,19 @@
   }
   .pagination{
     margin-left: 50px;
+  }
+  .nav-button{
+    min-width: fit-content;
+    height: 50px;
+    font-size: 10px !important;
+    padding: 0 15px;
+    white-space: nowrap;
+  }
+   .nav-button .MuiListItemIcon-root {
+    min-width: 30px;
+  }
+  .nav-button .MuiListItemText-root {
+    margin: 0;
   }
 }
 @media screen and (max-width: 1024px) {
