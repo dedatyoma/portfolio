@@ -46,10 +46,12 @@
   margin-left: 20px;
   border: 2px solid #222b44;
 }
+
 @media screen and (max-width: 1024px) {
   .market{
     position: relative;
-    top: -10px
+    top: -10px;
+    width: 390px;
   }
   
 }

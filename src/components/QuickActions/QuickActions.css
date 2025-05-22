@@ -31,12 +31,22 @@
 }
 @media screen and (max-width: 1440px) {
   .quick-actions{
+   height: 325px;
    position: relative;
-   top: -10px
+   top: -10px;
+   margin-bottom: 0;
+  }
+  .button-section{
+    gap: 15px;
   }
 }
 @media screen and (max-width: 1024px) {
   .quick-actions{
     width: 500px;
+    height: 300px;
+    margin-left: 5px;
+  }
+  .button-section{
+    gap: 5px;
   }
 }

@@ -1,7 +1,7 @@
 import './MyAccounts.css'
 import data from '../../data/accountData.json'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { Box, TableContainer, TableRow, TableCell,Container, TableHead, TableBody, IconButton } from '@mui/material'
+import { Box, TableContainer, TableRow, TableCell,Container, TableHead, TableBody, IconButton, Table } from '@mui/material'
 
 const MyAccounts = () => {
   const getStatusColor = (status) => {
@@ -63,15 +63,16 @@ const MyAccounts = () => {
           <div style={{ display: 'flex', gap: '10px' }}>
             <input className='account-search' type="search" placeholder="Search" />
             <div className="buttons" style={{ display: 'flex', gap: '10px' }}>
-              <button style={{ backgroundColor: 'rgba(30, 30, 200, 0.7)', color: 'white', border: 'none', borderRadius: '20px', padding: '5px 30px', fontSize:'15px',  fontWeight: 'bold', cursor: 'pointer' }}>Filter</button>
-              <button style={{  backgroundColor: 'rgba(30, 30, 200, 0.7)', color: 'white', border: 'none', borderRadius: '20px', padding: '5px 30px', fontSize:'15px',  fontWeight: 'bold', cursor: 'pointer'  }}>Sort</button>
-              <button style={{ backgroundColor: 'rgba(30, 30, 200, 0.7)', color: 'white', border: 'none', borderRadius: '20px', padding: '5px 30px',fontSize:'15px',  fontWeight: 'bold', cursor: 'pointer'  }}>Group</button>
-              <button style={{  backgroundColor: 'rgb(30, 120, 255)', color: 'white', border: 'none', borderRadius: '20px', padding: '5px 30px', fontSize:'15px', fontWeight: 'bold', cursor: 'pointer'  }}>+ New</button>
+              <button className='account-button' style={{ backgroundColor: 'rgba(30, 30, 200, 0.7)', color: 'white', border: 'none', borderRadius: '20px', padding: '5px 30px', fontSize:'15px',  fontWeight: 'bold', cursor: 'pointer' }}>Filter</button>
+              <button className='account-button' style={{  backgroundColor: 'rgba(30, 30, 200, 0.7)', color: 'white', border: 'none', borderRadius: '20px', padding: '5px 30px', fontSize:'15px',  fontWeight: 'bold', cursor: 'pointer'  }}>Sort</button>
+              <button className='account-button' style={{ backgroundColor: 'rgba(30, 30, 200, 0.7)', color: 'white', border: 'none', borderRadius: '20px', padding: '5px 30px',fontSize:'15px',  fontWeight: 'bold', cursor: 'pointer'  }}>Group</button>
+              <button className='account-button' style={{  backgroundColor: 'rgb(30, 120, 255)', color: 'white', border: 'none', borderRadius: '20px', padding: '5px 30px', fontSize:'15px', fontWeight: 'bold', cursor: 'pointer'  }}>+ New</button>
             </div>
           </div>
       </Container>
       <TableContainer className='account-table' sx={{overflowX: 'auto'}}>
-      <TableHead>
+        <Table>
+          <TableHead>
             <TableRow sx={{bgcolor:'rgba(78, 76, 76, 0.21)'}}>
               <TableCell sx={{ color: '#8B8D92', borderBottom: 'none' }}>ACCOUNT NAME/TYPE</TableCell>
               <TableCell sx={{ color: '#8B8D92', borderBottom: 'none' }}>LINE</TableCell>
@@ -142,11 +143,11 @@ const MyAccounts = () => {
                   <span style={{ 
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '6px'
+                    gap: '10px'
                   }}>
                     <span style={{ 
-                      width: '8px', 
-                      height: '8px', 
+                      width: '10px', 
+                      height: '10px', 
                       borderRadius: '50%', 
                       backgroundColor: getStatusColor(row.statusData.label)
                     }}></span>
@@ -167,6 +168,7 @@ const MyAccounts = () => {
               </TableRow>
             ))}
           </TableBody>
+        </Table>
       </TableContainer>
    </Box>
   )

@@ -1,7 +1,9 @@
 .main{
+  width: 1800px;
   display: flex;
   margin-left: 70px;
   padding: 10px;
+  justify-content: space-between;
 }
 .navbar {
   display: flex; 
@@ -29,7 +31,6 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: 50px;
 }
 .pag-button{
   width: 45px;
@@ -41,13 +42,14 @@
 }
 @media screen and (max-width: 1440px) {
   .main{
+    width: 93%;
     margin-left: 25px;
   }
   .navbar{
     gap: 8px;
   }
   .pagination{
-    margin-left: 50px;
+    margin-right: -30px;
   }
   .nav-button{
     min-width: fit-content;
@@ -68,9 +70,11 @@
     gap: 10px;
     width: 100%;
     overflow-x: auto;
+    margin-left: 10px !important;
   }
   .main{
-    margin-left: 30px;
+    width: 93%;
+    margin-left: 20px;
   }
   .pagination{
     display: none;
