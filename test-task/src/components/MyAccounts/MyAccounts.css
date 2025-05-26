@@ -1,0 +1,80 @@
+.account-box{
+  width: 1785px;
+  margin-left: 50px;
+  margin-top: 40px;
+  padding: 15px;
+  border-radius: 30px;
+  border: 1px solid rgb(45, 61, 91);
+  background-color: #181e32;
+}
+.account-container {
+  display: flex;
+  align-items:center;
+  float: left;
+  gap: 10px;
+}
+.account-caption{
+  font-size: 25px;
+}
+.account-search{
+  width: 250px;
+  padding: 15px;
+  border-radius: 50px;
+  background-color: #21283e;
+  color: white;
+  border: none;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 1440px) {
+  .account-box{
+    width: 97.5%;
+    margin-left: -28px;
+  }
+  .account-container{
+    float: left;
+  }
+  .account-caption{
+    margin-bottom: 30px;
+  }
+  .account-search{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .account-table{
+    margin-left: 0px;
+  }
+  .buttons{
+    height: 50px;
+  }
+  .account-button{
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .account-box{
+    width: 924px;
+    margin-top: -130px;
+    margin-left: -15px;
+  }
+  .account-container{
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .account-caption{
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .account-search{
+    width: 225px;
+    margin-bottom: 20px;
+    margin: 0 10px 0 10px;
+  }
+  .account-table{
+    margin-left: 0px;
+  }
+  .account-button{
+    width: 110px;
+  }
+}

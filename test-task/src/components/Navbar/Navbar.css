@@ -1,0 +1,95 @@
+.main{
+  width: 1800px;
+  display: flex;
+  margin-left: 70px;
+  padding: 10px;
+  justify-content: space-between;
+}
+.navbar {
+  display: flex; 
+  align-items: center;
+  width: auto;
+  gap: 8px;
+  overflow-x: auto;
+}
+.nav-button {
+   min-width: fit-content;
+  border-radius: 50px;
+  background-color:#181e32;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.nav-button.active {
+  background-color: #4E73DF;
+  color: white;
+}
+.icon.active{
+  color: white;
+}
+.pagination{ 
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pag-button{
+  width: 45px;
+  height: 45px;
+  border-radius:50px;
+  background-color: #181e32;
+  border: 1px solid rgb(45, 61, 91);
+  cursor: pointer;
+}
+@media screen and (max-width: 1440px) {
+  .main{
+    width: 93%;
+    margin-left: 25px;
+  }
+  .navbar{
+    gap: 8px;
+  }
+  .pagination{
+    margin-right: -30px;
+  }
+  .nav-button{
+    min-width: fit-content;
+    height: 50px;
+    font-size: 10px !important;
+    padding: 0 15px;
+    white-space: nowrap;
+  }
+   .nav-button .MuiListItemIcon-root {
+    min-width: 30px;
+  }
+  .nav-button .MuiListItemText-root {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .navbar{
+    gap: 10px;
+    width: 100%;
+    overflow-x: auto;
+    margin-left: 10px !important;
+  }
+  .main{
+    width: 93%;
+    margin-left: 20px;
+  }
+  .pagination{
+    display: none;
+  }
+  .nav-button{
+    min-width: fit-content;
+    height: 50px;
+    font-size: 10px !important;
+    padding: 0 15px;
+    white-space: nowrap;
+  }
+  .nav-button .MuiListItemIcon-root {
+    min-width: 30px;
+  }
+  .nav-button .MuiListItemText-root {
+    margin: 0;
+  }
+}

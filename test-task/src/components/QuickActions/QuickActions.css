@@ -1,0 +1,52 @@
+.quick-actions{
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  border: 1px solid rgb(45, 61, 91);
+  background-color: #181e32;
+}
+.actions-caption{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 25px;
+  font-size: 1.5rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+.button-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:6px;
+}
+.action{
+  width: 85%;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(56, 99, 185);
+  font-size: 20px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1440px) {
+  .quick-actions{
+   height: 325px;
+   position: relative;
+   top: -10px;
+   margin-bottom: 0;
+  }
+  .button-section{
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .quick-actions{
+    width: 500px;
+    height: 300px;
+    margin-left: 5px;
+  }
+  .button-section{
+    gap: 5px;
+  }
+}
