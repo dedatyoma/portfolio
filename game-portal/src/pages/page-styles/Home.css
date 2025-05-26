@@ -1,0 +1,66 @@
+*{
+  font-family: "Inder", sans-serif;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+.welcome{
+  margin-bottom: 60px;
+}
+h1{
+  margin-bottom: 35px;
+  font-size: 43px;
+}
+.game-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+.game-button{
+  width: 200px;
+  height: 200px;
+  margin: 41px;
+}
+.game-button:hover{
+  transform: scale(1.05);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.game-img{
+  width:160px;
+  height:160px;
+  margin: 0 auto;
+}
+.show{
+  padding: 20px;
+  font-size: 20px;
+}
+.show:hover{
+  transform: scale(1.05);
+  transition: 0.5s;
+  cursor: pointer;
+}
+header{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.theme{
+  width: 36px;
+  height: 36px;
+  border-radius: 50px;
+  margin-top: 19px;
+}
+img{
+  width: 66px;
+  height: 66px;
+  border-radius: 50px;
+}
