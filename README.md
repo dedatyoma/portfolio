@@ -14,6 +14,6 @@ Welcome to my personal portfolio! Here you can find some of the projects that re
 🧪 Tech stack: React, Redux Toolkit, Axios, MongoDB
 📄 Description: My final project at IT School Hillel — a small e-commerce platform with product listings, cart functionality, and backend integration (via MongoDB). Focused on modular code structure and asynchronous data fetching.
 
-4. Dashboard Page
+4. Dashboard Page (test-task folder)
 🧪 Tech stack: React, JavaScript, CSS
 📄 Description: A learning project where I focused on implementing my core frontend skills and which have fully responsive design for desktop, clean and modern dark-themed UI.
