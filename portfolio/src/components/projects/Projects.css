@@ -1,0 +1,57 @@
+.studies{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+
+}
+.studies h1{
+  color:black;
+  font-size: 34px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+}
+.studies p{
+  width: 570px;
+  color: #6b6969;
+  font-size: 14px;
+}
+.project-case{
+  display: flex;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.project-desc{
+  text-align: left;
+}
+.project-desc-right{
+  text-align: right;
+}
+.project-desc-right h1{
+  font-size: 24px;
+}
+.project-desc h1{
+  font-size: 24px;
+}
+.project-desc p{
+  margin-right: 31px;
+}
+.project-desc-right p{
+  margin-left: 31px;
+}
+.project-par{
+  width: 450px !important;
+  text-align: left;
+}
+.project-img{
+  width:500px ;
+  height:310px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+.project-but{
+  background-color: rgb(55, 55, 232);
+  margin-top: 30px;
+}
