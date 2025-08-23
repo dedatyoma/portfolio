@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   background-color: black;
-  margin-top: 81px;
+  margin: 81px 20px 0 30px;
   align-items: center;
 }
 .form-container p{
@@ -72,4 +72,100 @@ span{
 .error-message{
   color: red;
   margin-top: -15px;
+}
+
+/* Responsive Design for screens less than 1000px */
+@media (max-width: 999px) {
+  .form-container {
+    margin: 81px 15px 0 15px;
+  }
+  
+  .form-container p {
+    width: 90%;
+    max-width: 570px;
+    text-align: center;
+    margin: -20px auto 0 auto;
+  }
+  
+  form {
+    width: 90%;
+    max-width: 400px;
+    margin: 40px auto 0 auto;
+    align-items: center;
+  }
+  
+  .email,
+  .mobile,
+  .message {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .submit {
+    width: 100%;
+    max-width: 363px;
+  }
+}
+
+/* Responsive Design for screens less than 768px */
+@media (max-width: 767px) {
+  .form-container {
+    margin: 81px 10px 0 10px;
+  }
+  
+  .form-container p {
+    width: 95%;
+    font-size: 13px;
+  }
+  
+  form {
+    width: 95%;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .email,
+  .mobile,
+  .message {
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  .submit {
+    font-size: 15px;
+    height: 45px;
+    margin-top: 15px;
+  }
+}
+
+/* Responsive Design for screens less than 480px */
+@media (max-width: 479px) {
+  .form-container {
+    margin: 81px 5px 0 5px;
+  }
+  
+  .form-container p {
+    width: 98%;
+    font-size: 12px;
+  }
+  
+  form {
+    width: 98%;
+    gap: 12px;
+    margin-top: 25px;
+  }
+  
+  .email,
+  .mobile,
+  .message {
+    width: 100%;
+    font-size: 13px;
+    padding: 8px;
+  }
+  
+  .submit {
+    font-size: 14px;
+    height: 40px;
+    margin-top: 12px;
+  }
 }

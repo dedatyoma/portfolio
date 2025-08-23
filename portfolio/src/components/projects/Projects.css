@@ -55,3 +55,136 @@
   background-color: rgb(55, 55, 232);
   margin-top: 30px;
 }
+
+/* Responsive Design for screens less than 1000px */
+@media (max-width: 999px) {
+  .studies h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  .studies p {
+    width: 90%;
+    max-width: 570px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .project-case {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .project-desc,
+  .project-desc-right {
+    text-align: center;
+    order: 2;
+    margin: 20px 0;
+  }
+  
+  .project-desc h1,
+  .project-desc-right h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  
+  .project-desc p,
+  .project-desc-right p {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 450px;
+  }
+  
+  .project-par {
+    width: 90% !important;
+    max-width: 450px !important;
+    margin: 0 auto !important;
+  }
+  
+  .project-img {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    order: 1;
+  }
+  
+  .project-but {
+    margin: 20px auto 0 auto;
+    display: block;
+  }
+}
+
+/* Responsive Design for screens less than 768px */
+@media (max-width: 767px) {
+  .studies h1 {
+    font-size: 24px;
+  }
+  
+  .studies p {
+    width: 95%;
+    font-size: 13px;
+  }
+  
+  .project-case {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .project-desc h1,
+  .project-desc-right h1 {
+    font-size: 20px;
+  }
+  
+  .project-desc p,
+  .project-desc-right p {
+    width: 95%;
+  }
+  
+  .project-par {
+    width: 95% !important;
+    font-size: 13px !important;
+  }
+  
+  .project-img {
+    width: 95%;
+  }
+}
+
+/* Responsive Design for screens less than 480px */
+@media (max-width: 479px) {
+  .studies h1 {
+    font-size: 20px;
+  }
+  
+  .studies p {
+    width: 98%;
+    font-size: 12px;
+  }
+  
+  .project-case {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .project-desc h1,
+  .project-desc-right h1 {
+    font-size: 18px;
+  }
+  
+  .project-desc p,
+  .project-desc-right p {
+    width: 98%;
+  }
+  
+  .project-par {
+    width: 98% !important;
+    font-size: 12px !important;
+  }
+  
+  .project-img {
+    width: 98%;
+  }
+}

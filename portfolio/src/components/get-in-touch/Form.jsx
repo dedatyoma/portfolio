@@ -1,13 +1,16 @@
 import React from 'react'
 import { Formik } from 'formik';
 import './Form.css'
+import { useTranslation } from 'react-i18next'
+import '../../hooks/langConfig.js'
 
 function Form () {
+  const {t} = useTranslation()
   return (
     <>
      <div className='form-container'>
-      <h1>Get In Touch</h1>
-      <p>I’d love to hear from you! Whether you have a question, a project idea, or just want to say hello — feel free to reach out using the form below. We’ll get back to you as soon as possible.</p>
+      <h1>{t("getInTouch")}</h1>
+      <p>{t("connect")}</p>
        <Formik 
         initialValues={{email: '', mobile: '', message: ''}}
         validate={values => {
@@ -40,7 +43,7 @@ function Form () {
          isSubmitting,
        }) => (
          <form onSubmit={handleSubmit}>
-          <span>Email</span>
+          <span>{t("eMail")}</span>
            <input
              type="email"
              name="email"
@@ -51,7 +54,7 @@ function Form () {
              className='email'
            />
            {errors.email && touched.email && <div className="error-message">{errors.email}</div>}
-           <span>Mobile</span>
+           <span>{t("mobile")}</span>
            <input
              type="text"
              name="mobile"
@@ -62,7 +65,7 @@ function Form () {
              className='mobile'
            />
            {errors.mobile && touched.mobile && <div className="error-message">{errors.mobile}</div>}
-           <span>Message</span>
+           <span>{t("message")}</span>
            <input 
             type="text"
             name="message"
@@ -73,7 +76,7 @@ function Form () {
            />
            {errors.message && touched.message && <div className="error-message">{errors.message}</div>}
            <button type="submit" disabled={isSubmitting} className='submit'>
-             Submit &gt; 
+             {t("submit")} &gt; 
            </button>
          </form>
        )}

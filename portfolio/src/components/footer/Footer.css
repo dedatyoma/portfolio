@@ -10,8 +10,60 @@ footer{
 }
 footer p{
   color: #9C9C9C;
+  text-align: center;
 }
 .heart{
   height: 18px;
   margin-left: 5px;
+}
+
+/* Responsive Design for screens less than 1000px */
+@media (max-width: 999px) {
+  footer {
+    width: 90%;
+    margin: 80px auto 0 auto;
+    padding: 0 20px;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+  
+  .heart {
+    height: 16px;
+  }
+}
+
+/* Responsive Design for screens less than 768px */
+@media (max-width: 767px) {
+  footer {
+    width: 95%;
+    height: 70px;
+    padding: 0 15px;
+  }
+  
+  footer p {
+    font-size: 13px;
+  }
+  
+  .heart {
+    height: 15px;
+  }
+}
+
+/* Responsive Design for screens less than 480px */
+@media (max-width: 479px) {
+  footer {
+    width: 98%;
+    height: 60px;
+    padding: 0 10px;
+  }
+  
+  footer p {
+    font-size: 12px;
+  }
+  
+  .heart {
+    height: 14px;
+  }
 }

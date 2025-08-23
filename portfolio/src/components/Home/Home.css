@@ -1,0 +1,292 @@
+header{
+  width: 1500px;
+  height: 100px;
+  margin: -140px 85px 0px 85px;
+  display: flex;
+  align-items: center;
+  gap: 95px;
+  justify-content: space-around;
+  background-color: #1B1B1B;
+  border-bottom-left-radius:30px;
+  border-bottom-right-radius:30px;
+  position: fixed;
+}
+.header-main{
+  list-style: none;
+  display: flex;
+  gap: 70px;
+}
+.header-menu-item{
+  font-size: 18px;
+  color:#9C9C9C;
+  cursor: pointer;
+}
+.header-links{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.links{
+  height: 22px;
+}
+.git{
+  height: 35px;
+}
+.button-link{
+  background: transparent;
+}
+.flag{
+  height: 20px;
+}
+.select-language span{
+ text-transform: capitalize;
+ color: black;
+ margin-bottom: 1px;
+ margin-top: 1px;
+}
+.me{
+  padding: 20px;
+  display: flex;
+  gap:132px;
+  align-items: center;
+  margin-top: 130px;
+}
+.me-text{
+  text-align: left;
+}
+.me-text h1{
+  font-size: 44px;
+  font-family:"Raleway", sans-serif
+}
+.me-par{
+  width: 492px;
+  color: #9C9C9C;
+  font-size: 14px;
+  margin-top: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+}
+.me-button{
+  background-color: #3F8E00;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 20px;
+  width: 300px;
+  margin-top: 30px;
+}
+.me-button:hover{
+  box-shadow: 0 0 20px #62BA1B;
+  border-color: #62BA1B;
+}
+.myPhoto{
+  border-radius: 100%;
+  width:350px ;
+  height:350px;
+}
+.worked{
+  margin-top: 150px;
+  text-align: left;
+  margin-bottom:50px;
+}
+.worked h2{
+  margin-left: 40px;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.worked ul{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.company-card{
+  width: 160px;
+  height: 60px;
+}
+
+/* Responsive Design for screens less than 1000px */
+@media (max-width: 999px) {
+  header {
+    width: 90%;
+    height: 180px;
+    min-height: 80px;
+    margin: -140px 5% 0px 5%;
+    gap: 30px;
+    padding: 15px 0;
+    flex-wrap: wrap;
+  }
+  
+  .header-main {
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .header-menu-item {
+    font-size: 16px;
+  }
+  
+  .header-links {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .me {
+    padding: 80px;
+    gap: 60px;
+    margin-top: 130px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .me img{
+    margin-top: 50px
+  }
+  .me-text {
+    text-align: center;
+    order: 2;
+  }
+  
+  .me-text h1 {
+    font-size: 36px;
+  }
+  
+  .me-par {
+    width: 90%;
+    max-width: 492px;
+    margin: 10px auto 0 auto;
+  }
+  
+  .me-button {
+    width: 280px;
+    margin: 30px auto 0 auto;
+  }
+  
+  .myPhoto {
+    width: 280px;
+    height: 280px;
+    order: 1;
+  }
+  
+  .worked {
+    margin-top: 100px;
+    text-align: center;
+  }
+  
+  .worked h2 {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  
+  .worked ul {
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .company-card {
+    width: 140px;
+    height: 50px;
+  }
+}
+
+/* Responsive Design for screens less than 768px */
+@media (max-width: 767px) {
+  header {
+    width: 95%;
+    margin: -140px 2.5% 0px 2.5%;
+    gap: 20px;
+  }
+  
+  .header-main {
+    gap: 20px;
+  }
+  
+  .header-menu-item {
+    font-size: 14px;
+  }
+  
+  .me {
+    gap: 40px;
+    padding: 15px;
+  }
+  
+  .me-text h1 {
+    font-size: 28px;
+  }
+  
+  .me-par {
+    width: 95%;
+    font-size: 13px;
+  }
+  
+  .me-button {
+    width: 250px;
+    padding: 18px;
+    font-size: 15px;
+  }
+  
+  .myPhoto {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .worked ul {
+    gap: 20px;
+  }
+  
+  .company-card {
+    width: 120px;
+    height: 45px;
+  }
+}
+
+/* Responsive Design for screens less than 480px */
+@media (max-width: 479px) {
+  header {
+    width: 98%;
+    margin: -140px 1% 0px 1%;
+    padding: 10px 0;
+  }
+  
+  .header-main {
+    gap: 15px;
+  }
+  
+  .header-menu-item {
+    font-size: 13px;
+  }
+  
+  .me {
+    gap: 30px;
+    padding: 10px;
+  }
+  
+  .me-text h1 {
+    font-size: 24px;
+  }
+  
+  .me-par {
+    width: 98%;
+    font-size: 12px;
+  }
+  
+  .me-button {
+    width: 220px;
+    padding: 16px;
+    font-size: 14px;
+  }
+  
+  .myPhoto {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .worked ul {
+    gap: 15px;
+  }
+  
+  .company-card {
+    width: 100px;
+    height: 40px;
+  }
+}

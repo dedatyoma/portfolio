@@ -1,4 +1,4 @@
-import './Main.css'
+import './Home.css'
 import Select from 'react-select'
 import linkedIn from '../../assets/linkedIn.svg'
 import flagUK from '../../assets/Flag_of_the_UK.svg'
@@ -11,9 +11,16 @@ import paychex from '../../assets/PAYCHEX.svg'
 import elastic from '../../assets/elastic.svg'
 import stripe from '../../assets/stripe.svg'
 import github from '../../assets/github-icon.svg'
+import { useTranslation } from 'react-i18next'
+import '../../hooks/langConfig.js'
 
 
 function Main (){
+  const {t, i18n} = useTranslation()
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng)
+  }
+  
   const companies = [
     { logo: clickUp },
     { logo: dropbox },
@@ -22,9 +29,9 @@ function Main (){
     { logo: stripe },
   ];
   const options = [
-  { value: 'english', img: flagUK },
-  { value: 'ukrainian', img: flagUA },
-  { value: 'spanish', img: flagES }
+  { label: 'English', img: flagUK, value: 'en' },
+  { label: 'Українська', img: flagUA, value: 'ua' },
+  { label: 'Español', img: flagES, value : 'es' },
 ]
   function renderCompanies (list) {
     return list.map((company, idx) =>(
@@ -37,9 +44,9 @@ function Main (){
     <>
       <header>
         <ul className='header-main'>
-          <li className='header-menu-item'>Home</li>
-          <li className='header-menu-item'>Case Studies</li>
-          <li className='header-menu-item'>Get In Touch</li>
+          <li className='header-menu-item'>{t("home")}</li>
+          <li className='header-menu-item'>{t("caseStudies")}</li>
+          <li className='header-menu-item'>{t("getInTouch")}</li>
         </ul>
         <ul className='header-links'>
           <button className='button-link' 
@@ -48,14 +55,14 @@ function Main (){
          <Select 
             className='select-language'
             options={options} 
+            onChange={(option) => changeLanguage(option.value)}
             formatOptionLabel={(option) => (
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <img 
                   src={option.img} 
-                  alt={`${option.value} flag`} 
-                  style={{ width: '20px', height: '15px' }}
+                  style={{ width: '20px', height: '15px', marginTop: '-0.5px'}}
                 />
-                <span>{option.value}</span>
+                <span>{option.label}</span>
               </div>
             )}
             placeholder="Select language"
@@ -69,17 +76,17 @@ function Main (){
       <main className='me'>
       <div className='me-text'>
         <h1>
-          Artem Burdykin
+          {t("name")}
         </h1>
         <p className='me-par'>
-        I am a graduate of two courses provided by the Ukrainian IT School Hillel. I have a solid foundation in HTML, CSS/SCSS, JavaScript (ES6+), React, and related libraries. Over the past year, I’ve gained hands-on experience in developing web products.
+        {t("mePar")}
         </p>
-        <button className='me-button'>Let's get started &gt; </button>
+        <button className='me-button'>{t("letGetStarted")} &gt; </button>
       </div>
       <img src={myPhoto} className='myPhoto' alt="" />
       </main>
       <div className='worked'>
-          <h2>Worked with</h2>
+          <h2>{t("workedWith")}</h2>
           <ul>
             {renderCompanies(companies)}
           </ul>
