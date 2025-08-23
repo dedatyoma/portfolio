@@ -107,7 +107,7 @@ header{
 @media (max-width: 999px) {
   header {
     width: 90%;
-    height: 180px;
+    height: auto;
     min-height: 80px;
     margin: -140px 5% 0px 5%;
     gap: 30px;
@@ -116,7 +116,7 @@ header{
   }
   
   .header-main {
-    gap: 50px;
+    gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -132,15 +132,13 @@ header{
   }
   
   .me {
-    padding: 80px;
+    padding: 20px;
     gap: 60px;
     margin-top: 130px;
     flex-direction: column;
     text-align: center;
   }
-  .me img{
-    margin-top: 50px
-  }
+  
   .me-text {
     text-align: center;
     order: 2;

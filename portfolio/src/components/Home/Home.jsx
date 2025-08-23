@@ -1,6 +1,6 @@
 import './Home.css'
 import Select from 'react-select'
-import linkedIn from '../../assets/linkedIn.svg'
+import linkedIn from '../../assets/LinkedIn.svg'
 import flagUK from '../../assets/Flag_of_the_UK.svg'
 import flagUA from '../../assets/Flag_of_UA.svg'
 import flagES from '../../assets/Flag_of_Spain.svg'
