@@ -30,6 +30,7 @@ span{
   padding-left: 10px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 15px;
+  color: black;
 }
 .mobile{
   width: 350px;
@@ -41,6 +42,7 @@ span{
   padding-left: 10px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 15px;
+  color: black;
 }
 .message{
   width: 350px;
@@ -51,11 +53,10 @@ span{
   padding-left: 10px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 15px;
+  color: black;
+  padding-bottom: 75px;
 }
-.message::placeholder{
-  position: relative;
-  top:-40px
-}
+
 .submit{
   margin: 0 auto;
   background-color: #3F8E00;
